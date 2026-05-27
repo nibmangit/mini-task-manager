@@ -1,6 +1,11 @@
 import TaskItem from "./TaskItem";
 
-function TaskList({ tasks, deleteTask, toggleTask }) {
+function TaskList({
+  tasks,
+  deleteTask,
+  toggleTask,
+  editTask,
+}) {
   return (
     <div className="space-y-3">
       {tasks.length === 0 ? (
@@ -14,6 +19,7 @@ function TaskList({ tasks, deleteTask, toggleTask }) {
             task={task}
             deleteTask={deleteTask}
             toggleTask={toggleTask}
+            editTask={editTask}
           />
         ))
       )}
