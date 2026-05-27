@@ -297,6 +297,48 @@ This is REAL internship experience.
 
 ---
 
+###Folders Structure should exactly like this
+
+# 🏗️ Frontend Folder Structure
+
+```text
+frontend/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│
+│   ├── assets/              # images, icons, fonts
+│   │
+│   ├── components/          # reusable UI components
+│   │   ├── ui/              # buttons, inputs, cards
+│   │   ├── layout/          # navbar, header, footer
+│   │   └── tasks/           # task-related components
+│   │
+│   ├── pages/               # page-level components
+│   │   └── Home.jsx
+│   │
+│   ├── hooks/               # custom React hooks (optional)
+│   │
+│   ├── context/             # global state (optional later)
+│   │
+│   ├── services/            # API calls (future backend integration)
+│   │
+│   ├── utils/               # helper functions
+│   │
+│   ├── styles/              # global styles (if needed)
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css            # Tailwind entry file
+│
+├── .gitignore
+├── package.json
+├── tailwind.config.js
+└── README.md
+```
+
 
 # 🧭 Final Advice
 
