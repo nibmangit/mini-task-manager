@@ -5,6 +5,7 @@ import TaskFilter from "./components/tasks/TaskFilter";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [filter, setFilter] = useState("all");
 
   // Add task
   const addTask = (title) => {
@@ -43,16 +44,28 @@ function App() {
   );
 };
 
+const filteredTasks = tasks.filter((task) => {
+  if (filter === "active") {
+    return !task.completed;
+  }
+
+  if (filter === "completed") {
+    return task.completed;
+  }
+
+  return true;
+});
+
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6">
       <h1 className="text-3xl font-bold text-center mb-6">
         Mini Task Manager
       </h1>
-      <TaskFilter />
+      <TaskFilter filter={filter} setFilter={setFilter}/>
       <TaskInput addTask={addTask} />
 
       <TaskList
-        tasks={tasks}
+        tasks={filteredTasks}
         deleteTask={deleteTask}
         toggleTask={toggleTask}
         editTask={editTask}
