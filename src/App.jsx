@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TaskInput from "./components/tasks/TaskInput";
 import TaskList from "./components/tasks/TaskList";
+import TaskFilter from "./components/tasks/TaskFilter";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -47,7 +48,7 @@ function App() {
       <h1 className="text-3xl font-bold text-center mb-6">
         Mini Task Manager
       </h1>
-
+      <TaskFilter />
       <TaskInput addTask={addTask} />
 
       <TaskList
