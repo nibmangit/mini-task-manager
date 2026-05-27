@@ -13,8 +13,9 @@ function TaskInput({ addTask }) {
 
   return (
     <form onSubmit={handleSubmit} className="flex gap-2 mb-6">
-      <input
-        className="flex-1 p-2 rounded text-black"
+            <input
+        type="text"
+        className="flex-1 p-2 rounded bg-black text-white placeholder-gray-500 border border-gray-300"
         placeholder="Enter a task..."
         value={text}
         onChange={(e) => setText(e.target.value)}
