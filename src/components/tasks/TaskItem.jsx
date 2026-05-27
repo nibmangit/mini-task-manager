@@ -14,7 +14,11 @@ function TaskItem({ task, deleteTask, toggleTask }) {
         >
           ✓
         </button>
-
+       <button
+          className="bg-yellow-500 hover:bg-yellow-600 px-3 py-1 rounded text-white"
+        >
+          ✎
+        </button>
         <button
           onClick={() => deleteTask(task.id)}
           className="bg-red-500 px-2 py-1 rounded"
